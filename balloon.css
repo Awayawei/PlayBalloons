@@ -1,0 +1,35 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    /*超出的部分被隐藏 设置为scroll会有滚动条*/
+    overflow: hidden;
+    background: #cccccc;
+}
+.balloon{
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: #faf9f9;
+
+    /*圆角属性*/
+    border-radius:160px 160px 64px 160px;
+
+    /*形变 旋转*/
+    transform: rotate(45deg);
+
+    /*盒子阴影 x位移 y位移 羽化程度 半径 颜色  内外阴影*/
+    box-shadow: -8px -8px 80px -8px #873940 inset;
+}
+.balloon:after{
+    position: absolute;
+    bottom:0px;
+    right: 0px;
+    content: "";
+    /* transparent透明  当border的宽度 大于div的宽度时*/
+    border: 8px solid transparent;
+    border-right-color: #873940;
+    transform: rotate(45deg);
+    border-radius: 50%;
+}
